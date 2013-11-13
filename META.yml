@@ -18,4 +18,4 @@ resources:
   bugtracker: http://github.com/reneeb/Mojolicious-Plugin-CSSLoader/issues
   homepage: http://github.com/reneeb/Mojolicious-Plugin-CSSLoader
   repository: http://github.com/reneeb/Mojolicious-Plugin-CSSLoader.git
-version: 0.01
+version: 0.02
