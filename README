@@ -1,7 +1,7 @@
 
 
 This archive contains the distribution Mojolicious-Plugin-CSSLoader,
-version 0.02:
+version 0.03:
 
   move css loading to the end of the document
 

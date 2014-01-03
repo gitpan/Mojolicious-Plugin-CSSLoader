@@ -7,7 +7,7 @@ use warnings;
 
 use parent 'Mojolicious::Plugin';
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 sub register {
     my ($self, $app, $config) = @_;
@@ -63,7 +63,7 @@ Mojolicious::Plugin::CSSLoader - move css loading to the end of the document
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
