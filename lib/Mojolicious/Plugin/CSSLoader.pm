@@ -7,7 +7,7 @@ use warnings;
 
 use parent 'Mojolicious::Plugin';
 
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 
 sub register {
     my ($self, $app, $config) = @_;
@@ -21,6 +21,15 @@ sub register {
 
     $app->helper( css_load => sub {
         my $c = shift;
+
+        if ( $_[1]->{check} ) {
+            my $asset = $c->app->static->file(
+                $_[1]->{no_base} ? $_[0] : "$base$_[0]"
+            );
+
+            return '' if !$asset;
+        }
+
         push @{ $c->stash->{__CSSLOADERFILES__} }, [ @_ ];
     } );
 
@@ -87,13 +96,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Mojolicious::Plugin::CSSLoader - move css loading to the end of the document
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
